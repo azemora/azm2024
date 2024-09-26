@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+.rounded-img {
+  border-radius: 100px; /* Adjust the radius as needed */
+}
+.bg-black-gradient {
+  background: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.my-gradient {
+  background: linear-gradient(to top, var(--tw-gradient-start), var(--tw-gradient-end));
+}
+
+.bg-blue-gradient-2 {
+  background: linear-gradient(
+    -168.39deg,
+    #113180 -278.56%,
+    #5396db -78.47%,
+    #11101d 91.61%
+  );
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(
+    153.47deg,
+    rgba(255, 255, 255, 0) -341.94%,
+    #14101d 95.11%
+  );
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.sidebar {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+.feedback-container .feedback-card:last-child {
+  margin-right: 0px;
+}
+
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0.0, 0.0, 0.4);
+}
+
+.map-container {
+  position: relative;
+  display: inline-block;
+}
+
+.info-box {
+  position: absolute;
+  top: 50%; /* Adjust based on actual tooltip positioning */
+  left: 50%; /* Adjust based on actual tooltip positioning */
+  transform: translate(-50%, -50%);
+  background: var(--black-gradient);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+  width: 300px; /* Adjust as needed */
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.info-box.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.info-box h2 {
+  color: white;
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.info-box p {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+}
+
+/* Custom tooltip arrow */
+.info-box::before {
+  content: '';
+  position: absolute;
+  bottom: 100%; /* Adjust if necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--black-gradient) transparent;
+}
+
+/* Animation for the info-box */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.info-box.active {
+  animation: fadeInScale 0.3s ease-out forwards;
+}
+
+.phases-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.phase {
+  color: #fff;
+  background: #16205a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  hyphens: auto;
+  text-align: justify;
+  overflow-wrap: break-word; /* Quebra palavras longas se necessário */
+  margin: 0 10px; 
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  min-height: 400px; /* Ajuste conforme necessário */
+}
+
+.phase-title {
+  color: #f3c562;
+}
+
+.phase-content h3 {
+  color: #f3c562;
+  font-weight: bold;
+}
+
+.icon-placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: #120e49;
+  margin-bottom: 30px;
+}
+
+.design {
+  background-image: url('path-to-your-icon/design-icon.png');
+  background-size: cover;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.phase-icon {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.arrow-icon {
+  display: inline-block;
+  margin: 5px;
+  height: 14px;
+  width: auto;
+}
+
+.devmap-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.devmap-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.marginTop {
+  margin-top: 2rem;
+}
+
+.roadmap-container {
+  text-align: center;
+}
+
+.roadmap-title-container {
+  text-align: center;
+}
+
+.roadmap-title {
+  color: #ffc27c;
+  margin-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+.roadmap-subtitle {
+  color: #4682b4;
+  margin-bottom: 3rem;
+}
+
+.download-button {
+  background-color: #ffc27c;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 16px; /* Adiciona espaçamento entre o texto e o botão */
+}
+.film-grain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png'); /* Imagem de textura de grain */
+  opacity: 0.15; /* Efeito sutil */
+  z-index: 1; /* Certifique-se de que está sobre os elementos */
+  width: 100%; /* Cobrir 100% da largura */
+  height: 100%; /* Cobrir 100% da altura */
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
+  z-index: 1; /* Certifique-se que está abaixo do film grain */
+  width: 100%; /* Cobrir 100% da largura */
+  height: 100%; /* Cobrir 100% da altura */
+}
+
+
+.navbar {
+  background-color: transparent; /* Ensure the navbar is transparent */
+  position: absolute; /* Make it overlap the hero section */
+  top: 0; /* Ensure it sticks to the top */
+  width: 100%; /* Full width */
+  z-index: 10; /* Ensures it’s above the hero content */
+}
+
+
+.navbar-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px; /* Ajuste a altura conforme necessário */
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%); /* Gradiente mais suave de cima para baixo */
+  z-index: 1;
+  width: 100%;
+   transition: opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+.navbar:hover::before {
+  opacity: 1; /* Mostra a vinheta no hover */
+}
+
+.vignette-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh; /* Ocupa 100% da altura da viewport para garantir uma transição suave */
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1; /* Vinheta abaixo dos elementos principais */
+  width: 100%;
+}
+
+
+
+ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */
+
+ /* Styles.css */
+
+/* Estilos para a seção Hero */
+section#home {
+  height: auto; /* Permite o conteúdo expandir conforme necessário */
+  min-height: 100vh; /* Garante que ocupe a tela inteira */
+  padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: justify;
+}
+
+/* Ajustes específicos para telas menores */
+@media (max-width: 768px) {
+  section#home {
+    padding-top: 200px; /* Adiciona mais espaço entre a navbar e o texto */
+    background-size: cover;
+    background-position: top center;
+  }
+
+  /* Mantendo os outros ajustes para a versão mobile */
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 15px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
+/* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */
+
+/* Estilos para o ícone de hamburger */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Menu lateral para mobile */
+.fixed {
+  z-index: 50;
+}
+
+nav a {
+  font-size: 0.8rem;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #e9d790; /* Cor amarela ao hover */
+}
+
+/* Transição suave para o menu lateral */
+.transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Fechar o menu lateral ao clicar em qualquer link */
+nav a:active {
+  color: #e9d790;
+}
+
+/* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ /* Ajuste do botão */ 
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Espaçamento abaixo do texto */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e9d790; /* Amarelo claro */
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Animação para o menu hamburguer */
+.sidebar ul li {
+  position: relative;
+}
+
+.sidebar ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700; /* Linha amarela clara */
+  transition: width 0.4s ease-in-out;
+}
+
+.sidebar ul li:hover::after {
+  width: 100%; /* Expande a linha ao passar o mouse */
+}
+
+.sidebar {
+  z-index: 50; /* Aumente o z-index para garantir que o menu esteja no topo */
+}
+
+@keyframes mask-slide-out {
+  0% {
+    clip-path: inset(0 0 0 0); /* O texto começa completamente visível */
+  }
+  100% {
+    clip-path: inset(100% 0 0 0); /* A máscara sobe, escondendo o texto */
+  }
+}
+
+@keyframes mask-slide-in {
+  0% {
+    clip-path: inset(100% 0 0 0); /* A máscara começa escondendo o novo texto */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* A máscara sobe, revelando o texto */
+  }
+}
+
+.mask-slide-out {
+  animation: mask-slide-out 0.6s ease-in-out forwards;
+}
+
+.mask-slide-in {
+  animation: mask-slide-in 0.6s ease-in-out forwards;
+}
