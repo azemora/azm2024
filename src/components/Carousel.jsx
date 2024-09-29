@@ -23,62 +23,66 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
   }, [autoSlide, autoSlideInterval, next]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full h-[550px] w-[780px] overflow-hidden"> {/* Definindo a altura do container */}
       {/* Carousel (Imagem) */}
-     
-      <div className="relative w-full" style={{ height: '500px' }}>
-  <div className="absolute inset-0 overflow-hidden">
-    <div
-      className="flex transition-transform ease-out duration-1000 w-full h-full"
-      style={{ transform: `translateX(-${curr * 100}%)` }}
-    >
-      {slides.map((img, index) => (
-        <img
-          key={index}
-          src={img}
-          alt={`Slide ${index}`}
-          className="w-full h-full object-cover block rounded-img"
-        />
-      ))}
-    </div>
-  </div>
-</div>
+      <div className="w-full h-full">
+        <div
+          className="flex transition-transform ease-out duration-1000 w-full h-full"
+          style={{ transform: `translateX(-${curr * 100}%)` }}
+        >
+          {slides.map((img, index) => (
+            <div 
+              key={index} 
+              className="w-full h-full flex items-center justify-center flex-shrink-0 overflow-hidden" 
+              style={{ maxHeight: '120%', maxWidth: '120%' }} // Limita altura e largura máxima
+            >
+              <img
+                src={img}
+                alt={`Slide ${index}`}
+                className="object-contain w-full h-full" // A imagem agora se ajusta ao container verticalmente e horizontalmente
+                style={{
+                  height: '150%', // Definindo 100% de altura para a imagem
+                  width: '200%', // Manter a largura proporcional
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Novo Contêiner para Bolinhas e Setas */}
-      <div className="w-full flex justify-center mt-4">
-        <div className="relative flex justify-between items-center w-64 bg-white p-2 rounded-full shadow-lg">
-          {/* Botão para a Esquerda */}
-          <button
-            onClick={prev}
-            className="p-1 text-gray-800 hover:text-[#e9d790] transition-colors duration-300"
-          >
-            <ChevronLeft size={23} />
-          </button>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-auto flex justify-center items-center bg-white bg-opacity-50 p-2 rounded-full shadow-lg">
+        {/* Botão para a Esquerda */}
+        <button
+          onClick={prev}
+          className="p-1 text-gray-800 hover:text-[#e9d790] transition-colors duration-300"
+        >
+          <ChevronLeft size={23} />
+        </button>
 
-          {/* Bolinhas do Carrossel */}
-          <div className="flex gap-2">
-            {slides.map((_, index) => (
-              <div
-                key={index}
-                className={`cursor-pointer w-3 h-3 rounded-full transition-all ${
-                  curr === index ? "bg-opacity-100" : "bg-opacity-50"
-                }`}
-                style={{
-                  backgroundColor: curr === index ? "#e9d790" : "#E5E7EB",
-                }}
-                onClick={() => updateCurrentSlide(index)}
-              />
-            ))}
-          </div>
-
-          {/* Botão para a Direita */}
-          <button
-            onClick={next}
-            className="p-1 text-gray-800 hover:text-[#e9d790] transition-colors duration-300"
-          >
-            <ChevronRight size={23} />
-          </button>
+        {/* Bolinhas do Carrossel */}
+        <div className="flex gap-2 mx-4">
+          {slides.map((_, index) => (
+            <div
+              key={index}
+              className={`cursor-pointer w-3 h-3 rounded-full transition-all ${
+                curr === index ? "bg-opacity-100" : "bg-opacity-50"
+              }`}
+              style={{
+                backgroundColor: curr === index ? "#e9d790" : "#E5E7EB",
+              }}
+              onClick={() => updateCurrentSlide(index)}
+            />
+          ))}
         </div>
+
+        {/* Botão para a Direita */}
+        <button
+          onClick={next}
+          className="p-1 text-gray-800 hover:text-[#e9d790] transition-colors duration-300"
+        >
+          <ChevronRight size={23} />
+        </button>
       </div>
     </div>
   );

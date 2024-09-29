@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Carousel from "./Carousel"; 
 import { img1_c, img2_c, img3_c } from '../assets'; 
 import styles, { layout } from "../style"; 
@@ -47,11 +47,13 @@ const Business = () => {
       style={{ backgroundColor: '#E5E7EB', padding: '10px 0' }}
     >
       <div 
-        className="bg-[white] p-10 flex flex-col md:flex-row" // Reduzi o padding para p-10
-        style={{ width: '100%', maxWidth: '1500px' }} // Ajustei o maxWidth
+        className="bg-[white] p-0 flex flex-col md:flex-row" // Reduzi o padding para p-10
+        style={{ width: '100%', maxWidth: '1900px',  maxHeight:'1200px' }} // Ajustei o maxWidth
       >
-        <div className={`${layout.sectionInfo} flex-1 z-10 ${styles.flexStart} flex-col xl:px-12 sm:px-12 px-6`}>
-
+       <div 
+  className={`${layout.sectionInfo} flex-3 z-10 ${styles.flexStart} flex-col xl:px-50 sm:px-12 px-6 ml-8 pt-10 md:pt-0`} 
+  style={{ marginLeft: '80px' }}
+>
           {/* Subtítulo com linha amarela */}
           <div className={`flex items-center mb-2 ${isAnimatingOut ? 'mask-slide-out' : ''} ${isAnimatingIn ? 'mask-slide-in' : ''}`}>
             <div className="h-[2px] w-[50px] bg-[#272727] mr-4"></div>
@@ -83,16 +85,14 @@ const Business = () => {
         </div>
 
         {/* Ajuste do tamanho do Carousel e posicionamento ao lado do texto */}
-        <div className="flex-1 flex justify-center items-center mt-10 md:mt-0">
-          <div className="w-full max-w-lg">
-            <div className="aspect-square">
-              <Carousel
-                slides={carouselData.map(data => data.img)}
-                autoSlide={true}
-                autoSlideInterval={5000}
-                updateCurrentSlide={updateCurrentSlide}
-              />
-            </div>
+        <div className="flex-1 flex justify-center items-center mt-10 md:mt-0 h-full w-full">
+          <div className="w-full h-full">
+            <Carousel
+              slides={carouselData.map(data => data.img)}
+              autoSlide={true}
+              autoSlideInterval={5000}
+              updateCurrentSlide={updateCurrentSlide}
+            />
           </div>
         </div>
       </div>

@@ -1,23 +1,30 @@
 import React from 'react';
-import styles from "../style"; // Adjust if you have specific styles to import
-import Button from './Button'; // Update with the path to your button component
+import styles from "../style"; // Ensure this imports your custom styles
+import Button from './Button'; // Update with the correct path to your button component
 import { gamingBackground2, video } from '../assets';
 
 const CardDeal = () => (
   <section 
-    className={`${styles.flexCenter} flex-col items-center justify-center min-h-screen`} 
-    style={{ backgroundColor: "bg-custom-gradient1" }} // Ensure this is a valid color or gradient
+    className={`${styles.flexCenter} flex-col items-center justify-center min-h-screen bg-[#E5E7EB] py-16`} 
   >
-    {/* Title */}
-    <h2 className="font-poppins font-semibold xs:text-[48px] text-[30px] text-white xs:leading-[76.8px] leading-[66.8px] w-full text-center">
-      Lorem Pisum Lordetr
+    {/* Title Section with Similar Styling */}
+    <div className="flex items-center mb-4">
+      <div className="h-[2px] w-[50px] bg-[#272727] mr-4"></div> {/* Horizontal line */}
+      <p className="uppercase text-[black] font-bold text-[18px]">
+        Experiencing Transformation
+      </p>
+    </div>
+
+    {/* Main Title */}
+    <h2 className="font-poppins font-bold xs:text-[48px] text-[30px] text-[#272727] xs:leading-[76.8px] leading-[66.8px] w-full text-center mb-8">
+      Beyond Consulting.
     </h2>
-    
-    {/* Paragraph with added margin bottom */}
-    <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] text-center mb-10"> {/* Adjust the mb-10 to increase or decrease the space */}
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae justo dictum, vel mattis est porttitor id. 
+
+    {/* Subtitle Paragraph with Added Styling */}
+    <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] text-center mb-10 max-w-2xl">
+      We don't just provide consultancy; we guide you through the practical implementation of changes necessary for your company's growth.
     </p>
-    
+
     {/* Video Player */}
     <div className="w-full px-4 flex justify-center mb-8">
       <video 
@@ -36,9 +43,8 @@ const CardDeal = () => (
       </video>
     </div>
     
-    {/* Button */}
-    <Button title="Saiba mais" className="mt-10" /> {/* Ensure your Button component accepts these props */}
-
+    {/* Button with Similar Styling */}
+    <Button title="Saiba mais" className="mt-10 text-[#272727] bg-white hover:bg-[#e9d790] transition-all duration-300 px-8 py-3 font-bold rounded" /> {/* Ensure your Button component accepts these props */}
   </section>
 );
 
