@@ -14,7 +14,7 @@ import Eemails from "./Eemails"
 import Hero3 from "./Hero3";
 import Buttaoemail from "./Botaoemail";
 import Lgservicos from "./Lgservicos";
-import Business2 from "./Business copy";
+import Business2 from "./Business2";
 import Button2 from "./Button copy";
 import CardDeal2 from "./CardDeal copy";
 import Carousel from "./Carousel";
@@ -23,6 +23,7 @@ import Roadmap from "./Roadmap";
 import Phase from "./Phase";
 import Devmap from "./Devmap";
 import Devmap2 from "./Devmap2";
+import Otherprojects from "./Otherprojects";
 export {
   Navbar,
   Billing,
@@ -48,5 +49,6 @@ export {
   Roadmap,
   Phase,
   Devmap,
-  Devmap2
+  Devmap2,
+  Otherprojects
 };

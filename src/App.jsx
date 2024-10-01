@@ -1,5 +1,5 @@
 import styles from "./style";
-import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testimonials, Hero, Services, Hero2, Eemails, Hero3, Lgservicos, Business2, CardDeal2, Roadmap, Devmap, Devmap2 } from "./components";
+import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testimonials, Hero, Services, Hero2, Eemails, Hero3, Lgservicos, Business2, CardDeal2, Roadmap, Devmap, Devmap2, Otherprojects } from "./components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Home = () => (
@@ -14,23 +14,29 @@ const Home = () => (
     </div>
 
     {/* Seção Hero */}
-    <div className={`bg-custom-image bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart}`}>
+    <div className={`bg-custom-image bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart} `}>
       <div className={`${styles.boxWidth}`}>
         <Hero />
       </div>
     </div>
 
     {/* Seção Business com fundo cinza */}
-    <div className={`bg-gray-200 bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart}`}>
+    <div className={`bg-gray-200 bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart} style={{ marginBottom: '10rem' }}`}>
       <div className={`${styles.boxWidth}`}>
         <Business />
       </div>
     </div>
 
     {/* Outras seções da página */}
-    <div className={`bg-custom-gradient bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart}`}>
+    <div className={`bg-gray-200  bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
-        <CardDeal />
+        <Otherprojects />
+      </div>
+    </div>
+
+    <div className={`bg-gray-200 bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart} style={{ marginBottom: '2rem' }}`}>
+      <div className={`${styles.boxWidth}`}>
+        <CardDeal/>
       </div>
     </div>
 

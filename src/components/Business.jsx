@@ -43,15 +43,15 @@ const Business = () => {
   return (
     <section 
       id="features" 
-      className={`flex items-center justify-center`} 
-      style={{ backgroundColor: '#E5E7EB', padding: '10px 0' }}
+      className={`flex items-center justify-center py-0`} 
+      style={{ backgroundColor: '#E5E7EB', padding: '20px 0' }}
     >
       <div 
-        className="bg-[white] p-0 flex flex-col md:flex-row" // Reduzi o padding para p-10
+        className="bg-[white] rounded-lg p-0 flex flex-col md:flex-row" // Reduzi o padding para p-10
         style={{ width: '100%', maxWidth: '1900px',  maxHeight:'1200px' }} // Ajustei o maxWidth
       >
        <div 
-  className={`${layout.sectionInfo} flex-3 z-10 ${styles.flexStart} flex-col xl:px-50 sm:px-12 px-6 ml-8 pt-10 md:pt-0`} 
+  className={`${layout.sectionInfo} flex-3 z-10  ${styles.flexStart} flex-col xl:px-50 sm:px-12 px-6 ml-8 pt-10 md:pt-0`} 
   style={{ marginLeft: '80px' }}
 >
           {/* Subtítulo com linha amarela */}
@@ -86,15 +86,16 @@ const Business = () => {
 
         {/* Ajuste do tamanho do Carousel e posicionamento ao lado do texto */}
         <div className="flex-1 flex justify-center items-center mt-10 md:mt-0 h-full w-full">
-          <div className="w-full h-full">
-            <Carousel
-              slides={carouselData.map(data => data.img)}
-              autoSlide={true}
-              autoSlideInterval={5000}
-              updateCurrentSlide={updateCurrentSlide}
-            />
-          </div>
-        </div>
+  <div className="w-full h-full overflow-hidden">
+    <Carousel
+      slides={carouselData.map(data => data.img)}
+      autoSlide={true}
+      autoSlideInterval={5000}
+      updateCurrentSlide={updateCurrentSlide}
+      className="h-full w-full" // Adicione esta classe
+    />
+  </div>
+</div>
       </div>
     </section>
   );
