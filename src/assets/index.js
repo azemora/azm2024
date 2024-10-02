@@ -50,6 +50,8 @@ import roadmapback from "./roadmapback.png"
 import shuttle from "./shuttle.png"
 import arrowside from "./arrowside.png"
 import devmap from "./devmap.png"
+import img_test1 from "./img_test1.png"
+import img_test2 from "./img_test2.png"
 
 export {
   airbnb,
@@ -103,6 +105,8 @@ export {
   roadmapback,
   shuttle,
   arrowside,
-  devmap
+  devmap,
+  img_test1,
+  img_test2
 
 };

@@ -8,7 +8,7 @@ const Business = () => {
     {
       img: img1_c,
       title: "Jogos de Impacto",
-      paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae justo dictum, molestie nisl a, aliquet nisl. Aenean pharetra vestibulum tellus, vel mattis est porttitor id."
+      paragraph: "Lorem ipsum dolor sit ametenean pharetra vestibulum tellus, vel mattis est porttitor id."
     },
     {
       img: img2_c,
