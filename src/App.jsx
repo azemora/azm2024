@@ -40,7 +40,7 @@ const Home = () => (
       </div>
     </div>
 
-    <div className={`bg-custom-gradient bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart}`}>
+    <div className={`bg-gray-200 bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <CTA />
         <Footer />

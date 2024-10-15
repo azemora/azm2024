@@ -32,7 +32,7 @@ const AwardsSection = () => {
           {!activePanel ? (
             <div className="flex flex-col md:flex-row justify-center items-center w-full md:space-x-8 space-y-4 md:space-y-0">
               {/* Primeiro Cartão */}
-              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[300px] md:h-[500px] overflow-hidden">
+              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[500px] overflow-hidden">
                 <img
                   src={img_test1}
                   alt="PAINEL 1"
@@ -51,9 +51,9 @@ const AwardsSection = () => {
               </div>
 
               {/* Segundo Cartão */}
-              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[300px] md:h-[500px] overflow-hidden">
+              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[500px] overflow-hidden">
                 <img
-                  src={img_test2}
+                  src={img_test1}
                   alt="PAINEL 2"
                   className="w-full h-full object-cover"
                 />
@@ -88,7 +88,7 @@ const AwardsSection = () => {
                 <img
                   src={img_test1}
                   alt="Novo Conteúdo"
-                  className="max-w-full max-h-full object-contain md:max-h-full md:max-w-full"
+                  className="w-full h-full object-cover"
                   style={{
                     borderRadius: 'inherit',
                     transition: 'none',
@@ -98,9 +98,9 @@ const AwardsSection = () => {
               )}
               {activePanel === 2 && (
                 <img
-                  src={img_test2}
+                  src={img_test1}
                   alt="Novo Conteúdo"
-                  className="max-w-full max-h-full object-contain md:max-h-full md:max-w-full"
+                  className="w-full h-full object-cover"
                   style={{
                     borderRadius: 'inherit',
                     transition: 'none',
@@ -119,11 +119,13 @@ const AwardsSection = () => {
             <p className="uppercase text-gray-600 font-bold">Our Awards</p>
           </div>
 
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">A SUCCESS DRIVEN BY PASSION</h2>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+            A SUCCESS DRIVEN BY PASSION
+          </h2>
 
           {!activePanel ? (
             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
-              Larian Studios has been making critically acclaimed RPGs since 1996, from the award-winning series Divinity: Original Sin to Baldur's Gate 3.
+              Lorem ipsum psoa
             </p>
           ) : (
             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
