@@ -28,7 +28,7 @@ const AwardsSection = () => {
           style={{ padding: '0' }}
         >
           {!activePanel ? (
-            <div className="flex flex-col md:flex-row justify-center items-center w-full md:space-x-8 space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row justify-center items-center w-full md:space-x-12 space-y-4 md:space-y-0">
               {/* Primeiro Cartão */}
               <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[600px] overflow-hidden">
                 <img
@@ -111,14 +111,16 @@ const AwardsSection = () => {
         </div>
 
         {/* Seção de Texto */}
-        <div className="flex flex-col justify-center md:p-20 p-4 w-full text-center md:text-left">
-          <div className="flex items-center mb-4 justify-center md:justify-start">
+        <div className="flex flex-col justify-start md:p-20 p-8 w-full text-left md:text-left">
+          <div className="flex items-center mb-4 justify-start">
             <div className="h-[2px] w-[50px] bg-black mr-4"></div>
-            <p className="uppercase text-gray-600 font-bold">Our Awards</p>
+            <p className="uppercase text-gray-600 font-bold">
+              {!activePanel ? 'Our Awards' : activePanel === 1 ? 'Prêmios do Painel 1' : 'Prêmios do Painel 2'}
+            </p>
           </div>
 
           <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
-            A SUCCESS DRIVEN BY PASSION
+            {!activePanel ? 'A SUCCESS DRIVEN BY PASSION' : activePanel === 1 ? 'Título do Painel 1' : 'Título do Painel 2'}
           </h2>
 
           {!activePanel ? (
