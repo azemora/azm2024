@@ -13,14 +13,12 @@ const AwardsSection = () => {
   };
 
   return (
-    <section className="flex items-center justify-center bg-[#E5E7EB] py-10">
+    <section className="flex items-center justify-center bg-[#E5E7EB] py-20">
       <div
-        className={`bg-white rounded-lg p-0 flex flex-col md:flex-row shadow-lg w-full ${
-          activePanel ? 'overflow-hidden' : ''
-        }`}
+        className={`bg-white rounded-lg p-0 flex flex-col md:flex-row shadow-lg w-full overflow-hidden`}
         style={{
           maxWidth: '1900px',
-          height: '600px',
+          height: activePanel && window.innerWidth >= 768 ? '600px' : 'auto',
           transition: 'height 0.3s ease-in-out',
         }}
       >
@@ -32,7 +30,7 @@ const AwardsSection = () => {
           {!activePanel ? (
             <div className="flex flex-col md:flex-row justify-center items-center w-full md:space-x-8 space-y-4 md:space-y-0">
               {/* Primeiro Cartão */}
-              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[500px] overflow-hidden">
+              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[600px] overflow-hidden">
                 <img
                   src={img_test1}
                   alt="PAINEL 1"
@@ -51,7 +49,7 @@ const AwardsSection = () => {
               </div>
 
               {/* Segundo Cartão */}
-              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[500px] overflow-hidden">
+              <div className="relative bg-gray-900 rounded-md shadow-md w-full md:w-1/3 h-[600px] overflow-hidden">
                 <img
                   src={img_test1}
                   alt="PAINEL 2"
@@ -74,7 +72,7 @@ const AwardsSection = () => {
               className="flex items-center justify-center bg-gray-800 text-white rounded-md shadow-md w-full h-full relative"
               style={{
                 padding: '0',
-                maxHeight: '600px',
+                height: window.innerWidth >= 768 ? '600px' : 'auto',
                 maxWidth: '100%',
               }}
             >
@@ -88,7 +86,7 @@ const AwardsSection = () => {
                 <img
                   src={img_test1}
                   alt="Novo Conteúdo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   style={{
                     borderRadius: 'inherit',
                     transition: 'none',
@@ -100,7 +98,7 @@ const AwardsSection = () => {
                 <img
                   src={img_test1}
                   alt="Novo Conteúdo"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   style={{
                     borderRadius: 'inherit',
                     transition: 'none',
@@ -113,7 +111,7 @@ const AwardsSection = () => {
         </div>
 
         {/* Seção de Texto */}
-        <div className="flex flex-col justify-center md:p-20 p-10 w-full text-center md:text-left">
+        <div className="flex flex-col justify-center md:p-20 p-4 w-full text-center md:text-left">
           <div className="flex items-center mb-4 justify-center md:justify-start">
             <div className="h-[2px] w-[50px] bg-black mr-4"></div>
             <p className="uppercase text-gray-600 font-bold">Our Awards</p>

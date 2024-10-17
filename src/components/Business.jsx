@@ -41,23 +41,23 @@ const Business = () => {
   };
 
   return (
-    <section 
-      id="features" 
-      className={`flex items-center justify-center py-0`} 
-      style={{ backgroundColor: '#E5E7EB', padding: '20px 0' }}
-    >
-      <div 
-        className="bg-[white] rounded-lg p-0 flex flex-col md:flex-row" // Reduzi o padding para p-10
-        style={{ width: '100%', maxWidth: '1900px',  maxHeight:'1200px' }} // Ajustei o maxWidth
-      >
-       <div 
-  className={`${layout.sectionInfo} flex-3 z-10  ${styles.flexStart} flex-col xl:px-50 sm:px-12 px-6 ml-8 pt-10 md:pt-0`} 
-  style={{ marginLeft: '80px' }}
+<section 
+  id="features" 
+  className="flex items-center justify-center py-10 pb-10 sm:pb-10" 
+  style={{ backgroundColor: '#E5E7EB', padding: '20px 0' }}
 >
+      <div 
+        className="bg-white rounded-lg p-0 flex flex-col md:flex-row" 
+        style={{ width: '100%', maxWidth: '1900px', maxHeight: '1200px' }}
+      >
+        <div 
+          className={`${layout.sectionInfo} flex-3 z-10 ${styles.flexStart} flex-col xl:px-50 sm:px-12 px-6 ml-8 pt-10 md:pt-0`} 
+          style={{ marginLeft: '80px' }}
+        >
           {/* Subtítulo com linha amarela */}
           <div className={`flex items-center mb-2 ${isAnimatingOut ? 'mask-slide-out' : ''} ${isAnimatingIn ? 'mask-slide-in' : ''}`}>
             <div className="h-[2px] w-[50px] bg-[#272727] mr-4"></div>
-            <p className={`uppercase text-[black] font-bold`}>
+            <p className="uppercase text-black font-bold">
               {carouselData[currentSlide].title}
             </p>
           </div>
@@ -85,17 +85,17 @@ const Business = () => {
         </div>
 
         {/* Ajuste do tamanho do Carousel e posicionamento ao lado do texto */}
-        <div className="flex-1 flex justify-center items-center mt-10 md:mt-0 h-full w-full">
-  <div className="w-full h-full overflow-hidden">
-    <Carousel
-      slides={carouselData.map(data => data.img)}
-      autoSlide={true}
-      autoSlideInterval={5000}
-      updateCurrentSlide={updateCurrentSlide}
-      className="h-full w-full" // Adicione esta classe
-    />
-  </div>
-</div>
+        <div className="flex-1 flex justify-center items-center mt-10 md:mt-0 w-full h-auto">
+          <div className="w-full h-auto overflow-visible">
+            <Carousel
+              slides={carouselData.map(data => data.img)}
+              autoSlide={true}
+              autoSlideInterval={5000}
+              updateCurrentSlide={updateCurrentSlide}
+              className="w-full h-auto" 
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

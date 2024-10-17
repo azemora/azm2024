@@ -591,3 +591,21 @@ nav a:active {
   width: 100%;
   overflow: hidden; /* Para cortar o excesso de imagem */
 }
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: auto; /* Garantir que o carrossel se ajuste ao conteúdo no mobile */
+    width: 100%;  /* Largura total no mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: auto; /* Altura ajustada no mobile */
+  }
+  
+  .carousel-container img {
+    height: auto;
+    width: 100%; /* A imagem se ajusta à largura do contêiner no mobile */
+  }
+}

@@ -23,7 +23,7 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
   }, [autoSlide, autoSlideInterval, next]);
 
   return (
-    <div className="relative w-full h-[550px] w-[780px] overflow-hidden"> {/* Definindo a altura do container */}
+    <div className="relative w-full h-auto overflow-hidden"> {/* Altura automática para se ajustar a diferentes telas */}
       {/* Carousel (Imagem) */}
       <div className="w-full h-full">
         <div
@@ -34,15 +34,15 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
             <div 
               key={index} 
               className="w-full h-full flex items-center justify-center flex-shrink-0 overflow-hidden" 
-              style={{ maxHeight: '120%', maxWidth: '120%' }} // Limita altura e largura máxima
+              style={{ maxHeight: '100%', maxWidth: '100%' }} // Removi os limites excessivos de tamanho
             >
               <img
                 src={img}
                 alt={`Slide ${index}`}
-                className="object-contain w-full h-full" // A imagem agora se ajusta ao container verticalmente e horizontalmente
+                className="object-contain w-full h-full" // A imagem se ajusta ao contêiner corretamente
                 style={{
-                  height: '150%', // Definindo 100% de altura para a imagem
-                  width: '200%', // Manter a largura proporcional
+                  height: '100%', // Ajusta a altura da imagem de acordo com o contêiner
+                  width: '100%',  // Largura proporcional ao contêiner
                 }}
               />
             </div>
@@ -50,7 +50,7 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
         </div>
       </div>
 
-      {/* Novo Contêiner para Bolinhas e Setas */}
+      {/* Contêiner para Bolinhas e Setas */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-auto flex justify-center items-center bg-white bg-opacity-50 p-2 rounded-full shadow-lg">
         {/* Botão para a Esquerda */}
         <button
