@@ -5,8 +5,8 @@ const ScientificArticles = () => {
   const articles = [
     {
       id: 1,
-      title: 'Estudo sobre a Biodiversidade',
-      description: 'Um estudo abrangente sobre a biodiversidade e sua importância para o ecossistema global.',
+      title: 'Estudo sobre a Biodiversidade Biodiversidade Biodiversidade Biodiversidade',
+      description: 'Um estudo abrangente sobre a biodiversidade e suangente sobre a biodiversidade e sngente sobre a biodiversidade e sngente sobre a biodiversidade e s importância para o ecossistema global.',
       imageUrl: img_test1, // Adicionei uma URL de imagem
       downloadLink: '#',
     },
@@ -24,13 +24,12 @@ const ScientificArticles = () => {
       imageUrl: img_test1,
       downloadLink: '#',
     },
-    // Adicione mais artigos conforme necessário
   ];
 
   return (
-    <section className="flex items-center justify-center py-10 px-10">
-     <div className="bg-white rounded-lg p-6 flex flex-col shadow-lg w-[1900px]">
-        <div className="flex-1 flex flex-col items-center px-6 pt-6 md:pt-0">
+    <section className="flex items-center justify-center py-2">
+      <div className="bg-white rounded-lg p-5 flex flex-col shadow-lg w-full max-w-[1900px]">
+        <div className="flex-1 flex flex-col items-center px-6 p-10 pt-6">
           {/* Subtítulo com linha preta */}
           <div className="flex items-center mb-2 justify-center">
             <div className="h-[2px] w-[50px] bg-[#272727] mr-4"></div>
