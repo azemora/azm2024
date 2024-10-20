@@ -3,10 +3,10 @@ import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testi
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Home = () => (
-  <div className='bg-black w-full overflow-hidden'>
+  <div className='bg-gray-200 w-full overflow-hidden'>
     
     {/* Container para a Navbar com o efeito de vinheta */}
-    <div className={`${styles.paddingX} ${styles.flexCenter} relative navbar-container`}>
+    <div className={`${styles.paddingX} ${styles.flexStart} relative navbar-container`}>
       <div className={`${styles.boxWidth}`}>
         <Navbar />
       </div>
