@@ -13,13 +13,14 @@ const AwardsSection = () => {
   };
 
   return (
-    <section className="flex items-center justify-center bg-[#E5E7EB] py-20">
+    <section className="flex items-center justify-center bg-[#E5E7EB] py-2">
       <div
         className={`bg-white rounded-lg p-0 flex flex-col md:flex-row shadow-lg w-full overflow-hidden`}
         style={{
           maxWidth: '1900px',
           height: activePanel && window.innerWidth >= 768 ? '600px' : 'auto',
           transition: 'height 0.3s ease-in-out',
+          
         }}
       >
         {/* Seção de Cartões / Conteúdo */}
@@ -86,7 +87,7 @@ const AwardsSection = () => {
                 <img
                   src={img_test1}
                   alt="Novo Conteúdo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                   style={{
                     borderRadius: 'inherit',
                     transition: 'none',
@@ -98,7 +99,7 @@ const AwardsSection = () => {
                 <img
                   src={img_test1}
                   alt="Novo Conteúdo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                   style={{
                     borderRadius: 'inherit',
                     transition: 'none',
@@ -119,17 +120,17 @@ const AwardsSection = () => {
             </p>
           </div>
 
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">Lorem ipsum psoa
             {!activePanel ? 'A SUCCESS DRIVEN BY PASSION' : activePanel === 1 ? 'Título do Painel 1' : 'Título do Painel 2'}
           </h2>
 
           {!activePanel ? (
             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
-              Lorem ipsum psoa
+              Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa
             </p>
           ) : (
             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
-              {activePanel === 1 ? 'Texto do painel 1' : 'Texto do painel 2'}
+              {activePanel === 1 ? 'Texto do painel 1' : 'Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa'}
             </p>
           )}
         </div>

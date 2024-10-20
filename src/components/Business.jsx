@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from "./Carousel"; 
-import { img1_c, img2_c, img3_c } from '../assets'; 
+import { img1_c, img2_c, img3_c, img_test1 } from '../assets'; 
 import styles, { layout } from "../style"; 
 
 const Business = () => {
@@ -11,12 +11,12 @@ const Business = () => {
       paragraph: "Lorem ipsum dolor sit ametenean pharetra vestibulum tellus, vel mattis est porttitor id."
     },
     {
-      img: img2_c,
+      img: img1_c,
       title: "Além da Consultoria",
       paragraph: "Vamos além da consultoria, facilitando a implementação prática das mudanças necessárias."
     },
     {
-      img: img3_c,
+      img: img1_c,
       title: "Transformação Vivencial",
       paragraph: "Com a OptSec, você vivencia a transformação, posicionando sua empresa para prosperar na era digital."
     }
@@ -44,11 +44,11 @@ const Business = () => {
 <section 
   id="features" 
   className="flex items-center justify-center py-10 pb-10 sm:pb-10" 
-  style={{ backgroundColor: '#E5E7EB', padding: '20px 0' }}
+  style={{ backgroundColor: '#E5E7EB', padding: '10px 0' }}
 >
       <div 
-        className="bg-white rounded-lg p-0 flex flex-col md:flex-row" 
-        style={{ width: '100%', maxWidth: '1900px', maxHeight: '1200px' }}
+        className="bg-white rounded-lg p-0 flex flex-col md:flex-row shadow-sm" 
+        style={{ width: '100%', maxWidth: '1820px', maxHeight: '1200px' }}
       >
         <div 
           className={`${layout.sectionInfo} flex-3 z-10 ${styles.flexStart} flex-col xl:px-50 sm:px-12 px-6 ml-8 pt-10 md:pt-0`} 

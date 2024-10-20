@@ -24,6 +24,8 @@ import Phase from "./Phase";
 import Devmap from "./Devmap";
 import Devmap2 from "./Devmap2";
 import Otherprojects from "./Otherprojects";
+import ScientificArticles from "./ScientificArticles";
+
 export {
   Navbar,
   Billing,
@@ -50,5 +52,6 @@ export {
   Phase,
   Devmap,
   Devmap2,
-  Otherprojects
+  Otherprojects,
+  ScientificArticles
 };

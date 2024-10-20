@@ -55,7 +55,7 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
         {/* Botão para a Esquerda */}
         <button
           onClick={prev}
-          className="p-1 text-gray-800 hover:text-[#e9d790] transition-colors duration-300"
+          className="p-1 text-gray-800 hover:text-[#f2d563] transition-colors duration-300"
         >
           <ChevronLeft size={23} />
         </button>
@@ -69,7 +69,7 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
                 curr === index ? "bg-opacity-100" : "bg-opacity-50"
               }`}
               style={{
-                backgroundColor: curr === index ? "#e9d790" : "#E5E7EB",
+                backgroundColor: curr === index ? "#d6b747" : "#E5E7EB",
               }}
               onClick={() => updateCurrentSlide(index)}
             />
@@ -79,7 +79,7 @@ const Carousel = ({ slides, updateCurrentSlide, autoSlide = false, autoSlideInte
         {/* Botão para a Direita */}
         <button
           onClick={next}
-          className="p-1 text-gray-800 hover:text-[#e9d790] transition-colors duration-300"
+          className="p-1 text-gray-800 hover:text-[#f2d563] transition-colors duration-300"
         >
           <ChevronRight size={23} />
         </button>

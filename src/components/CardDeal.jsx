@@ -4,10 +4,10 @@ import { gamingBackground2, video } from '../assets';
 
 const CardDeal = () => (
   <section 
-    className="flex justify-center items-center min-h-screen bg-[#E5E7EB] py-2"
+    className="flex justify-center items-center min-h-screen bg-[#E5E7EB]"
   >
     {/* Container Principal com fundo branco */}
-    <div className="bg-white p-10 rounded-lg shadow-lg flex flex-col items-center padding: '20px 0' w-full max-w-[1900px]">
+    <div className="bg-white p-10 rounded-lg shadow-lg flex flex-col items-center w-full max-w-[1900px]">
       
       {/* Título e Subtítulo com linha e estilo similar à página anterior */}
       <div className="flex items-center mb-4">

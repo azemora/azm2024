@@ -8,7 +8,7 @@ const CTA = () => (
     style={{ backgroundColor: '#E5E7EB', padding: '50px 0' }}
   >
     <div 
-      className="bg-[white] rounded-lg p-10 flex flex-col md:flex-row"
+      className="bg-[white] rounded-lg p-10 flex flex-col md:flex-row shadow-none"
       style={{ width: '100%', maxWidth: '1900px', maxHeight: '800px' }}
     >
       <div 

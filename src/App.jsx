@@ -1,5 +1,5 @@
 import styles from "./style";
-import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testimonials, Hero, Services, Hero2, Eemails, Hero3, Lgservicos, Business2, CardDeal2, Roadmap, Devmap, Devmap2, Otherprojects } from "./components";
+import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testimonials, Hero, Services, Hero2, Eemails, Hero3, Lgservicos, Business2, CardDeal2, Roadmap, Devmap, Devmap2, Otherprojects, ScientificArticles } from "./components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Home = () => (
@@ -42,6 +42,7 @@ const Home = () => (
 
     <div className={`bg-gray-200 bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
+        <ScientificArticles/>
         <CTA />
         <Footer />
       </div>
