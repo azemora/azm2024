@@ -3,7 +3,7 @@ import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testi
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Home = () => (
-  <div className='bg-custom-gradient w-full overflow-hidden'>
+  <div className='bg-black w-full overflow-hidden'>
     
     {/* Container para a Navbar com o efeito de vinheta */}
     <div className={`${styles.paddingX} ${styles.flexCenter} relative navbar-container`}>
@@ -14,7 +14,7 @@ const Home = () => (
     </div>
 
     {/* Seção Hero */}
-    <div className={`bg-custom-image bg-no-repeat bg-cover bg-center ${styles.paddingX} ${styles.flexStart} `}>
+    <div className={`bg-custom-image5 bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart} `}>
       <div className={`${styles.boxWidth}`}>
         <Hero />
       </div>

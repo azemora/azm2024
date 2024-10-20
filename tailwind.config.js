@@ -20,7 +20,8 @@ module.exports = {
         'custom-image': `url('./src/assets/gamingBackground.png')`,
         'custom-image2' : `url('./src/assets/video.mp4')`,
         'custom-image4' : `url('./src/assets/gamingBackground2.png')`,
-        'custom-image3' : `url('./src/assets/gamingBackground3.png')`
+        'custom-image3' : `url('./src/assets/gamingBackground_large.png')`,
+        'custom-image5' : `url('./src/assets/gamingBackground_large2.png')`
 
       },
       fontFamily: {

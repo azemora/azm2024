@@ -438,7 +438,7 @@ li {
 /* Estilos para a seção Hero */
 section#home {
   height: auto; /* Permite o conteúdo expandir conforme necessário */
-  min-height: 100vh; /* Garante que ocupe a tela inteira */
+  min-height: 85vh; /* Garante que ocupe a tela inteira */
   padding-top: 100px;
   padding-bottom: 50px;
   text-align: justify;
