@@ -9,6 +9,7 @@ const Hero = () => {
       style={{
         height: '270px', // Reduzindo pela metade (antes 540px)
         width: '1200px',  // Reduzindo pela metade (antes 600px)
+        paddingTop: '100px',
         backgroundPosition: 'center',
         backgroundImage: 'url(https://www.your-image-url.com)',
       }}
