@@ -112,29 +112,39 @@ const Devmap = () => {
     )},
   ];
 
+
   return (
-    <div className=" p-8">
+    <div className="p-8">
       <div className="text-center mb-12">
-      <h1 className="roadmap-title flex-1 font-poppins font-semibold ss:text-[45px] text-[52px] text-white ss:leading-[40px] leading-[50px]">Our Project Timeline</h1>
-      <h2 className="roadmap-subtitle ss:text-[30px]">Starting in 2019</h2>
+        <h1 className="roadmap-title flex-1 font-poppins font-semibold ss:text-[45px] text-[52px] ss:leading-[40px] leading-[50px]">Our Project Timeline</h1>
+        <h2 className="text-[#e9d790] ss:text-[30px]">Starting in 2019</h2>
       </div>
       <div className="relative max-w-6xl mx-auto">
-        <div className="absolute w-1 bg-custom_yellow h-full left-1/2 transform -translate-x-1/2"></div>
-        
+        <div className="absolute w-1 bg-[#e9d790] h-full left-0 transform"></div> {/* Linha amarela à esquerda */}
         {roadmapItems.map((item, index) => (
-          <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-custom_yellow shadow-xl w-8 h-8 rounded-full">
-              <h1 className="mx-auto text-blue-900 font-semibold text-lg">{index + 1}</h1>
+          <div key={index} className="mb-8 flex items-center w-full">
+            <div className="order-1 w-2/12 flex justify-center relative">
+              {/* Linha horizontal que toca a bolinha */}
+              <div className="absolute top-1/2 -left-8 w-[calc(100%-2rem)] h-[2px] bg-[#e9d790]"></div>
+              <div className="z-20 flex items-center bg-[#e9d790] shadow-xl w-8 h-8 rounded-full">
+                <h1 className="mx-auto text-[#272727] font-semibold text-lg">{index + 1}</h1>
+              </div>
             </div>
-            <div className="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-blue-900 text-xl">{item.title}</h3>
-              <p className="text-sm leading-snug tracking-wide text-gray-900">{item.description}</p>
+            <div className="order-1 bg-white rounded-lg shadow-xl w-10/12 px-12 py-6 ml-10"> {/* Aumenta a largura e margens */}
+              {/* Título e Subtítulo */}
+              <h1 className="text-4xl md:text-5xl font-bold text-[#272727] leading-tight">Serious Game.</h1>
+              <div className="flex items-center mb-2 mt-4">
+                <div className="h-[2px] w-[50px] bg-[#272727] mr-4"></div>
+                <p className="uppercase text-black font-bold">{item.title}</p>
+              </div>
+              
+              <p className="text-[#272727] text-base md:text-lg mt-5 leading-relaxed text-justify">
+                {item.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
-      
     </div>
   );
 };

@@ -43,7 +43,11 @@ const Home = () => (
     <div className={`bg-gray-200 bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <ScientificArticles/>
-        <CTA />
+      </div>
+    </div>
+
+    <div className={`bg-bgfooter bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
         <Footer />
       </div>
     </div>
@@ -69,17 +73,32 @@ const Servicos = () => (
 );
 
 const Aboutus = () => (
-  <div className='bg-primary w-full overflow-hidden'>
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+  <div className='bg-gray-200 w-full overflow-hidden'>
+    {/* Navbar Section */}
+    <div className={`${styles.paddingX} ${styles.flexStart} relative navbar-container`}>
       <div className={`${styles.boxWidth}`}>
         <Navbar />
+      </div>
+      <div className="navbar-vignette"></div>
+    </div>
+
+    {/* Content Section */}
+    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.boxWidth}`}>
         <Devmap />
         <Devmap2 />
+      </div>
+    </div>
+
+    {/* Footer Section */}
+    <div className={`bg-bgfooter bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
         <Footer />
       </div>
     </div>
   </div>
 );
+
 
 const App = () => (
   <BrowserRouter>
