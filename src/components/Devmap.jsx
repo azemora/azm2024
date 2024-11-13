@@ -114,31 +114,32 @@ const Devmap = () => {
 
 
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       <div className="text-center mb-12">
-        <h1 className="roadmap-title flex-1 font-poppins font-semibold ss:text-[45px] text-[52px] ss:leading-[40px] leading-[50px]">Our Project Timeline</h1>
-        <h2 className="text-[#e9d790] ss:text-[30px]">Starting in 2019</h2>
+        <h1 className="roadmap-title flex-1 font-poppins font-semibold text-[32px] md:text-[52px] leading-[40px] md:leading-[50px]">Our Project Timeline</h1>
+        <h2 className="text-[#e9d790] text-[24px] md:text-[30px]">Starting in 2019</h2>
       </div>
       <div className="relative max-w-6xl mx-auto">
-        <div className="absolute w-1 bg-[#e9d790] h-full left-0 transform"></div> {/* Linha amarela à esquerda */}
+        {/* Linha amarela na lateral para mobile */}
+        <div className="absolute w-[2px] bg-[#e9d790] h-full left-2 md:left-0 transform"></div>
         {roadmapItems.map((item, index) => (
-          <div key={index} className="mb-8 flex items-center w-full">
-            <div className="order-1 w-2/12 flex justify-center relative">
+          <div key={index} className="mb-8 flex flex-col md:flex-row items-start md:items-center w-full">
+            <div className="order-1 w-full md:w-2/12 flex justify-center relative mb-4 md:mb-0">
               {/* Linha horizontal que toca a bolinha */}
-              <div className="absolute top-1/2 -left-8 w-[calc(100%-2rem)] h-[2px] bg-[#e9d790]"></div>
-              <div className="z-20 flex items-center bg-[#e9d790] shadow-xl w-8 h-8 rounded-full">
-                <h1 className="mx-auto text-[#272727] font-semibold text-lg">{index + 1}</h1>
+              <div className="absolute top-1/2 -left-8 w-[calc(100%-2rem)] md:w-10 h-[2px] bg-[#e9d790] hidden md:block"></div>
+              <div className="z-20 flex items-center bg-[#e9d790] shadow-xl w-6 h-6 md:w-8 md:h-8 rounded-full">
+                <h1 className="mx-auto text-[#272727] font-semibold text-sm md:text-lg">{index + 1}</h1>
               </div>
             </div>
-            <div className="order-1 bg-white rounded-lg shadow-xl w-10/12 px-12 py-6 ml-10"> {/* Aumenta a largura e margens */}
-              {/* Título e Subtítulo */}
-              <h1 className="text-4xl md:text-5xl font-bold text-[#272727] leading-tight">Serious Game.</h1>
-              <div className="flex items-center mb-2 mt-4">
-                <div className="h-[2px] w-[50px] bg-[#272727] mr-4"></div>
-                <p className="uppercase text-black font-bold">{item.title}</p>
+            <div className="order-1 bg-white rounded-lg shadow-xl w-full md:w-10/12 px-6 py-4 md:px-12 md:py-6 ml-0 md:ml-10">
+              {/* Título e Subtítulo com tamanhos reduzidos no mobile */}
+              <h1 className="text-2xl md:text-4xl font-bold text-[#272727] leading-tight">Serious Game.</h1>
+              <div className="flex items-center mb-2 mt-2 md:mt-4">
+                <div className="h-[2px] w-[30px] md:w-[50px] bg-[#272727] mr-2 md:mr-4"></div>
+                <p className="uppercase text-black font-bold text-sm md:text-base">{item.title}</p>
               </div>
               
-              <p className="text-[#272727] text-base md:text-lg mt-5 leading-relaxed text-justify">
+              <p className="text-[#272727] text-sm md:text-lg mt-3 md:mt-5 leading-relaxed text-justify">
                 {item.description}
               </p>
             </div>

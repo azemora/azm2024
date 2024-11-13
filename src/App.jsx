@@ -111,4 +111,28 @@ const App = () => (
   </BrowserRouter>
 );
 
+const globalStyles = `
+  .grain-background {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grain-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.05);
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    z-index: 1;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+`;
+
 export default App;
