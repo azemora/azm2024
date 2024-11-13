@@ -82,6 +82,12 @@ const Aboutus = () => (
       <div className="navbar-vignette"></div>
     </div>
 
+    <div className={`bg-custom-image6 bg-no-repeat bg-center ${styles.paddingX} ${styles.flexStart} `}>
+      <div className={`${styles.boxWidth}`}>
+        <Hero2/>
+      </div>
+    </div>
+
     {/* Content Section */}
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
@@ -105,8 +111,8 @@ const App = () => (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/services" element={<Servicos />} />
-      <Route path="/aboutus" element={<Aboutus />} />
+      <Route path="/timeline" element={<Aboutus />} />
+      <Route path="/aboutus" element={<Servicos />} />
     </Routes>
   </BrowserRouter>
 );

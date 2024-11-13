@@ -1,37 +1,33 @@
 import styles from "../style";
-import { robot, Backbusiness,card, logo } from "../assets";
 import GetStarted from "./GetStarted";
+
+import { timead } from '../assets';
+
 
 const Hero2 = () => {
   return (
-    <section id="home" 
-        className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-        <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 text-left`}>
-        <div className="flex flex-row justify-between items-center w-full">
-        <h1 className="flex-1 font-poppins font-semibold ss:text-[45px] text-[52px] text-white ss:leading-[70.8px] leading-[50px]">
-               About us{" "} <br></br>
-                <span className="text-gradient ss:text-[45px]">Our previous works</span>{" "}
-              </h1>
-          <div className="ss:flex hidden md:mr-4 mr-0">
-            {/*<GetStarted />*/}
-          </div>
+    <section
+      id="home"
+      className={`relative flex items-center justify-center ${styles.paddingY}`}
+      style={{ minHeight: '50vh' }} // Reduzindo a altura vertical da página
+    >
+      <div className={`flex-1 ${styles.flexCenter} flex-col sm:px-12 px-6 text-center items-center`}> {/* Centralizando o texto */}
+        
+        {/* Título */}
+        <h1 className={`text-4xl md:text-5xl font-bold text-[#fbf7ea] leading-tight mb-2`} style={{ fontFamily: 'fatfrank, sans-serif', fontWeight: 400, fontStyle: 'normal' }}> {/* Cor do título alterada e fonte atualizada */}
+          Our Project Timeline
+        </h1>
+
+        {/* Subtítulo */}
+        <div className="flex items-center justify-center mb-4">
+          <div className="h-[2px] w-[50px] bg-[#e9d790] mr-4"></div> {/* Linha amarela */}
+          <p className="uppercase text-[#e9d790] font-bold">Starting in 2019</p> {/* Subtítulo atualizado */}
         </div>
-        <p className={`${styles.paragraph} ${styles.justified} max-w-[470px] mt-5`}>
-        A Consultoria Mão na Massa, formada por experts em segurança com formação em ciência da computação, vai além da consultoria tradicional. Nós analisamos e resolvemos problemas, identificando riscos e implementando soluções que asseguram segurança e tranquilidade aos clientes.
-        </p>
-    </div>
 
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img src={logo} alt="billing" className="relative z-[5]" />
-        {/* gradient start */}
-        <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
-        <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
-        <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
-        {/* gradient end */}
-      </div>
-
-      <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
+        {/* Imagem */}
+        <div className="w-full flex items-center justify-center">
+        <img src={timead} alt="Timeline Advertisement" style={{ transform: 'scale(0.75)' }} /> {/* Imagem adicionada */}
+        </div>
       </div>
     </section>
   );

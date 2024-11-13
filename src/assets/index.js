@@ -55,6 +55,8 @@ import img_test2 from "./img_test2.png"
 import gamingBackground_large from "./gamingBackground_large.png"
 import gamingBackground_large2 from "./gamingBackground_large2.png"
 import newlogo_black from "./newlogo_black.png"
+import gamingBackground_large3 from "./gamingBackground_large3.png"
+import timead from "./timead.png"
 
 
 export {
@@ -114,6 +116,7 @@ export {
   img_test2,
   gamingBackground_large,
   gamingBackground_large2,
-  newlogo_black
-
+  newlogo_black,
+  gamingBackground_large3,
+  timead
 };

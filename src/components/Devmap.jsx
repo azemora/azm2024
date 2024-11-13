@@ -112,13 +112,8 @@ const Devmap = () => {
     )},
   ];
 
-
   return (
     <div className="p-4 md:p-8">
-      <div className="text-center mb-12">
-        <h1 className="roadmap-title flex-1 font-poppins font-semibold text-[32px] md:text-[52px] leading-[40px] md:leading-[50px]">Our Project Timeline</h1>
-        <h2 className="text-[#e9d790] text-[24px] md:text-[30px]">Starting in 2019</h2>
-      </div>
       <div className="relative max-w-6xl mx-auto">
         {/* Linha amarela na lateral para mobile */}
         <div className="absolute w-[2px] bg-[#e9d790] h-full left-2 md:left-0 transform"></div>
