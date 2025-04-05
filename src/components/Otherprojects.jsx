@@ -127,6 +127,11 @@ const AwardsSection = () => {
           {!activePanel ? (
             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
               Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa
+              Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa
+              Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa
+              Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa
+              Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoa
+              Lorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem ipsum psoaLorem END
             </p>
           ) : (
             <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">

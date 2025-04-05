@@ -4,11 +4,13 @@ import { img1_c, img2_c, img3_c, img_test1 } from '../assets';
 import styles, { layout } from "../style"; 
 
 const Business = () => {
+  // TEXTOS #####
+
   const carouselData = [
     {
       img: img1_c,
       title: "Jogos de Impacto",
-      paragraph: "Lorem ipsum dolor sit ametenean pharetra vestibulum tellus, vel mattis est porttitor id."
+      paragraph: "Lorem ipsum dolor sit ametenean phaid.Lorem ipsum dolor sit ameteneaem ipsum dolor sit ametenean pharetra vestibulum tellus, vel mattis est n pharetra vestibulum tellus, vel mattis est porttitor em ipsum dolor sit ametenean pharetra vestibulum tellus, vel mattis est id.Lorem ipsum dolor sit ametenean pharetra vestibulum tellus, vel mattis est porttitor i END."
     },
     {
       img: img1_c,
@@ -79,7 +81,7 @@ const Business = () => {
             >
               <span className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#e9d790] group-hover:w-full transition-all duration-300"></span>
               <span className="absolute left-[20px] top-1/2 -translate-y-1/2 w-0 h-[2px] bg-black group-hover:w-[20px] transition-all duration-300"></span>
-              <span className="relative z-10 pl-6 group-hover:pl-8 group-hover:translate-x-[-10px] transition-all duration-300">Entre em Contato</span>
+              <span className="relative z-10 pl-6 group-hover:pl-8 group-hover:translate-x-[-10px] transition-all duration-300">Saiba mais</span>
             </a>
           </div>
         </div>

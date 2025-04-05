@@ -6,7 +6,7 @@ const ScientificArticles = () => {
     {
       id: 1,
       title: 'Estudo sobre a Biodiversidade Biodiversidade Biodiversidade Biodiversidade',
-      description: 'Um estudo abrangente sobre a biodiversidade e suangente sobre a biodiversidade e sngente sobre a biodiversidade e sngente sobre a biodiversidade e s importância para o ecossistema global.',
+      description: 'Um estudo abrangente sobre a biodiversidade e suangente sobre a biodiversidade e sngente sobre a biodiversidade e sngente sobre a biodiversidade e s importância para o ecossistema global.Um estudo abrangente sobre a biodiversidade e suangente sobre a biodiversidade e sngente sobre a biodiversidade e sngente sobre a biodiversidade e s importância para o ecossistema global.Um estudo abrangente sobre a biodiversidade e suangente sobre a biodiversidade e sngente sobre a biodiversidade e sngente sobre a biodiversidade e s importância para o ecossistema global.',
       imageUrl: img_test1, // Adicionei uma URL de imagem
       downloadLink: '#',
     },

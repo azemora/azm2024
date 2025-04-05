@@ -47,8 +47,8 @@ function Roadmap() {
   return (
     <div className="roadmap-container">
       <div className="roadmap-title-container">
-        <h1 className="roadmap-title flex-1 font-poppins font-semibold ss:text-[45px] text-[52px] text-white ss:leading-[40px] leading-[50px]">What i've done</h1>
-        <h2 className="roadmap-subtitle ss:text-[30px]">My Game Dev Experience</h2>
+        <h1 className="roadmap-title flex-1 font-poppins font-semibold ss:text-[45px] text-[52px] text-white ss:leading-[40px] leading-[50px]">What is done</h1>
+        <h2 className="roadmap-subtitle ss:text-[30px]">Game Dev Experience</h2>
       </div>
       <div className="phases-container">
         {phases.map((phase, index) => (
