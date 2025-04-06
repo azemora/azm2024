@@ -107,7 +107,8 @@ const Aboutus = () => (
 
 
 const App = () => (
-  <BrowserRouter>
+  console.log(import.meta.env),
+  <BrowserRouter basename={import.meta.env.PROD ? '/azm2024' : '/'}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
